@@ -1,0 +1,94 @@
+body{
+  margin: 0;
+  padding: 0;
+  /* margin-inline: 5%; */
+  background-color: azure;
+  font-family: 'Roboto', sans-serif;
+}
+header {
+  line-height: 2rem;
+  grid-area: header;
+  background-color: rgb(50, 50, 114);
+  color: azure;
+  text-align: center;
+}
+aside { 
+  margin: 0;
+  min-height: 100vh;
+  grid-area: aside;
+  background-color: #E8EBE4; 
+  color: black;
+
+}
+header h1{
+  font-size: 30px;
+  font-weight: 400;
+}
+aside h2{
+  margin-top: 25px;
+  margin-left: 42px;
+  font-size: 30px;
+  font-weight: 600;
+} 
+aside ul li h3{
+  margin: 5px;
+  font-size: 27px;
+  font-weight: 200;
+}
+aside ul{   
+  list-style: none;
+  display: flex; /* Se aplica flex para distribución de elementos de la barra lateral */
+  flex-direction: column;
+} 
+
+main {
+  grid-area: main;
+  background-color: #E8EBE4;
+  color: black;
+  display: grid;     /* Creando grilla de productos con Grid */  
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+  place-items: center;
+  grid-area: main;
+}
+p{
+  margin: 10px;
+}
+.desc{
+  margin-top: 20px;
+  font-size: 25px;
+  font-weight: 600;
+}
+section{
+  display: flex;   /*Se utiliza Flex para la construcción de tarjetas de productos*/
+  flex-direction: column;   
+  align-items: center;
+  justify-content: center;
+  background-color:#E8EBE4;
+}
+section img{
+  max-width: 100%;
+}
+section button{
+  margin: 10px;
+  background-color: rgb(50, 50, 114);
+  color: azure;
+  height: 30px;
+  width: 100%;
+}
+
+footer {
+  line-height: 2rem;
+  grid-area: footer;
+  color: black;
+  text-align: center;
+}
+.grid-container {
+  display: grid;             /* Se crea layout con CSS Grid */
+  grid-template-areas:
+    "header header header"
+    "aside main main"
+    "footer footer footer";
+  gap: 10px;
+  grid-template-columns: 1fr 5fr;
+}
